@@ -1,0 +1,323 @@
+@import constants
+
+.services
+  padding-bottom: 96px
+  &--page
+    padding: 96px 0
+
+  &__container
+    grid-column-gap: 4rem
+    grid-row-gap: 4rem
+    grid-template-rows: auto
+    grid-template-columns: 1fr
+    @media screen and (min-width: 991px)
+      grid-template-columns: 1fr 1.2fr
+    &--page
+      display: grid
+      grid-auto-columns: 1fr
+      grid-template-columns: 1fr
+      grid-row-gap: 16px
+      grid-column-gap: 16px
+      @media screen and (min-width: 767px)
+        grid-template-columns: 2fr 1fr
+
+
+  &__content-grid
+    grid-column-start: span 1
+    grid-column-end: span 1
+    grid-row-start: span 1
+    grid-row-end: span 1
+    align-self: center
+    @media screen and (min-width: 479px)
+    .services__cards-grid
+      &:first-child
+        .services__cards-wrapper
+          margin-top: 48px
+    &--cards
+      display: grid
+      grid-auto-columns: 1fr
+      grid-column-gap: 2rem
+      grid-row-gap: 2rem
+      grid-template-rows: auto
+      grid-template-columns: 1fr
+      @media screen and (min-width: 479px)
+        grid-template-columns: 1fr 1fr
+    &--btn
+      justify-self: start
+      @media screen and (min-width: 767px)
+        align-self: end
+        justify-self: end
+
+  &__cards-grid
+    grid-column-start: span 1
+    grid-column-end: span 1
+    grid-row-start: span 1
+    grid-row-end: span 1
+
+  &__cards-wrapper
+    display: grid
+    grid-auto-columns: 1fr
+    grid-column-gap: 2rem
+    grid-row-gap: 2rem
+    grid-template-columns: 1fr
+    grid-template-rows: auto auto
+    &--page
+      grid-template-columns: 1fr
+      padding-top: 96px
+      @media screen and (min-width: 479px)
+        grid-template-columns: 1fr 1fr
+
+  &__card
+    position: relative
+    width: 100%
+    height: 100%
+    padding: 55px 25px 25px
+    border-radius: 30px
+    background-color: $neutral-10
+    color: $color-3
+    text-decoration: none
+    cursor: pointer
+    transition: background-color .5s ease-in-out
+    &:hover
+      background-color: $color-6
+      .services__card-text
+        color: $text-white
+
+  &__card-arrow
+    visibility: hidden
+
+  &__card-title
+    font-size: 1.2rem
+    color: $text-white
+    line-height: 1.4
+    margin: 10px 0
+
+  &__card-text
+    font-size: 0.925rem
+    color: $text-gray
+    transition: color .5s ease-in-out
+
+.service-inner
+  padding: 96px 0
+
+  &__heading-wrapper
+    grid-column-gap: 4rem
+    grid-row-gap: 4rem
+    grid-template-columns: 1fr
+    grid-template-rows: auto
+    @media screen and (min-width: 767px)
+      grid-column-gap: 6rem
+      grid-row-gap: 6rem
+    @media screen and (min-width: 991px)
+      grid-row-gap: 16px
+      grid-column-gap: 16px
+      grid-template-columns: 1fr 1fr
+
+  &__photos-wrapper
+    grid-column-start: 1
+    grid-column-end: 2
+    grid-row-start: 1
+    grid-row-end: 2
+    grid-column-gap: 1rem
+    grid-row-gap: 1rem
+
+  &__image-wrapper
+    grid-column-end: 2
+    grid-column-start: 1
+    grid-row-end: 5
+    grid-row-start: 1
+    position: relative
+    margin-left: auto
+
+  &__heading-image
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+    &--1
+      width: 46vw
+      height: 54vh
+      border-top-left-radius: 25vw
+      border-bottom-left-radius: 25vw
+      border-bottom-right-radius: 25vw
+      position: relative
+      z-index: 1
+      @media screen and (min-width: 479px)
+        width: 40vw
+        height: 84vw
+      @media screen and (min-width: 767px)
+        width: 40vw
+        height: 75vw
+      @media screen and (min-width: 991px)
+        width: 22vw
+        height: 55vh
+        border-top-left-radius: 12vw
+        border-bottom-left-radius: 10vw
+        border-bottom-right-radius: 10vw
+      @media screen and (min-width: 1440px)
+        height: 65vh
+        width: 18vw
+      @media screen and (min-width: 1920px)
+        width: 15vw
+        height: 28vw
+    &--2
+      width: 40vw
+      height: 40vw
+      border-top-left-radius: 100%
+      border-bottom-left-radius: 100%
+      border-bottom-right-radius: 100%
+      grid-column-start: 2
+      grid-column-end: 3
+      grid-row-start: 1
+      grid-row-end: 3
+      align-self: start
+      @media screen and (min-width: 767px)
+        width: 34vw
+        height: 34vw
+      @media screen and (min-width: 991px)
+        width: 16vw
+        height: 16vw
+      @media screen and (min-width: 1920px)
+        width: 12vw
+        height: 12vw
+    &--3
+      width: 40vw
+      height: 40vw
+      border-top-right-radius: 100%
+      border-bottom-left-radius: 100%
+      border-bottom-right-radius: 100%
+      grid-column-start: 2
+      grid-row-end: 5
+      grid-row-start: 3
+      align-self: end
+      justify-self: start
+      background-position: 50% 0
+      @media screen and (min-width: 767px)
+        width: 34vw
+        height: 34vw
+      @media screen and (min-width: 991px)
+        width: 16vw
+        height: 16vw
+      @media screen and (min-width: 1920px)
+        width: 12vw
+        height: 12vw
+
+  &__dots
+    left: -5%
+    bottom: -5%
+    @media screen and (min-width: 479px)
+      bottom: -3%
+    @media screen and (min-width: 767px)
+      left: -3%
+      bottom: 0
+    @media screen and (min-width: 991px)
+      left: -6%
+      bottom: -3%
+    &--block-right
+      left: auto
+      right: -6%
+      bottom: -6%
+    &--block-left
+      bottom: -6%
+      left: -6%
+
+  &__heading-text
+    grid-column-start: span 1
+    grid-column-end: span 1
+    grid-row-start: span 1
+    grid-row-end: span 1
+    align-self: center
+
+  &__title
+    font-size: 2.5rem
+    line-height: 1.1
+    font-weight: 400
+    @media screen and (min-width: 479px)
+      font-size: 3.5rem
+    @media screen and (min-width: 767px)
+      font-size: 4rem
+
+  &__text-wrapper
+    grid-column-start: span 1
+    grid-column-end: span 1
+    grid-row-start: span 1
+    grid-row-end: span 1
+    align-self: center
+
+  &__content-wrapper
+    display: flex
+    flex-direction: column-reverse
+    grid-column-gap: 3rem
+    grid-row-gap: 3rem
+    @media screen and (min-width: 767px)
+      grid-template-rows: auto
+      grid-column-gap: 6rem
+      grid-row-gap: 6rem
+    @media screen and (min-width: 991px)
+      display: grid
+      grid-column-gap: 2rem
+      grid-row-gap: 2rem
+    &--not-revert
+      flex-direction: column
+
+  &__text-content
+    grid-column-start: span 1
+    grid-column-end: span 1
+    grid-row-start: span 1
+    grid-row-end: span 1
+    align-self: center
+
+  &__list
+    margin-top: 10px
+    li
+      font-size: 1rem
+      line-height: 1.6
+      color: $text-gray
+      margin-bottom: 10px
+      @media screen and (min-width: 767px)
+        font-size: 1.25rem
+
+  &__block-image
+    height: 54vh
+    width: 90vw
+    justify-self: start
+    position: relative
+    border-top-right-radius: 25vw
+    border-bottom-left-radius: 25vw
+    background-position: 50% 0
+    background-size: cover
+    background-repeat: no-repeat
+    grid-column-start: span 1
+    grid-column-end: span 1
+    grid-row-start: span 1
+    grid-row-end: span 1
+    @media screen and (min-width: 479px)
+      height: 50vh
+      width: 50vw
+      margin: 0 auto
+    @media screen and (min-width: 767px)
+      //height: 90vh
+    @media screen and (min-width: 991px)
+      height: 60vh
+      width: 36vw
+      border-top-right-radius: 12vw
+      border-bottom-left-radius: 12vw
+      justify-self: end
+    @media screen and (min-width: 1920px)
+      width: 26vw
+      height: 60vh
+      border-top-right-radius: 8vw
+      border-bottom-left-radius: 8vw
+    &--left-borders
+      border-top-left-radius: 25vw
+      border-bottom-right-radius: 25vw
+      border-top-right-radius: 0
+      border-bottom-left-radius: 0
+      @media screen and (min-width: 991px)
+        border-top-left-radius: 12vw
+        border-bottom-right-radius: 12vw
+      @media screen and (min-width: 1920px)
+        width: 26vw
+        height: 60vh
+        border-top-left-radius: 8vw
+        border-bottom-right-radius: 8vw

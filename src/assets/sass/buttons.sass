@@ -1,0 +1,26 @@
+@import constants
+
+.btn
+  height: 52px
+  width: 160px
+  display: block
+  border-radius: 50px
+  color: $text-white
+  font-size: 0.875rem
+  font-weight: 500
+  text-align: center
+  letter-spacing: 2px
+  padding: 15px 24px
+  transition: transform 400ms ease, background-color 400ms ease, -webkit-transform 400ms ease
+  &--blue
+    background: $color-6
+    &:hover
+      border-color: #5cc97b
+      background-color: #5cc97b
+      transform: translate(0px, -5px)
+  &--gray
+    background: $neutral-20
+    &:hover
+      border-color: #212427 #212427 #212427 $neutral-20
+      background-color: $neutral-30
+      transform: translate(0px, -5px)

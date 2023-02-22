@@ -1,0 +1,73 @@
+@import ../../constants
+
+.stats
+  padding: 96px 0
+
+  &__container
+    display: flex
+    flex-direction: column-reverse
+    grid-auto-columns: 1fr
+    grid-column-gap: 1rem
+    grid-row-gap: 1rem
+    grid-template-columns: 1fr
+    @media screen and (min-width: 991px)
+      display: grid
+      grid-column-gap: 2rem
+      grid-row-gap: 2rem
+      grid-template-columns: 1.5fr 1fr
+      grid-template-rows: auto
+
+  &__list
+    grid-column-start: span 1
+    grid-column-end: span 1
+    grid-row-start: span 1
+    grid-row-end: span 1
+    grid-column-gap: 1rem
+    grid-row-gap: 1rem
+    grid-template-columns: 1fr
+    @media screen and (min-width: 767px)
+      grid-template-columns: 1fr 1fr
+    @media screen and (min-width: 991px)
+      grid-column-gap: 2rem
+      grid-row-gap: 2rem
+
+  &__item
+    grid-column-start: span 1
+    grid-column-end: span 1
+    grid-row-start: span 1
+    grid-row-end: span 1
+    border-radius: 30px
+    background-color: $neutral-10
+    padding: 1.5rem 1.25rem
+    @media screen and (min-width: 479px)
+      padding: 2rem
+    @media screen and (min-width: 767px)
+      padding: 2.5rem
+    h3
+      font-size: 2rem
+      color: $text-white
+      margin: 10px 0
+    p
+      font-size: 1rem
+      color: $text-gray
+      margin: 10px 0
+
+  &__image
+    width: 100%
+    height: 50vh
+    border-top-right-radius: 25vw
+    border-bottom-left-radius: 25vw
+    border-bottom-right-radius: 25vw
+    background-image: url('~@/assets/images/stats-image.png')
+    background-position: 50% 0%
+    background-size: cover
+    background-repeat: no-repeat
+    @media screen and (min-width: 479px)
+      width: 50vw
+      margin: 0 auto
+    @media screen and (min-width: 767px)
+      height: 50vh
+    @media screen and (min-width: 991px)
+      width: 100%
+      height: 100%
+      margin: 0

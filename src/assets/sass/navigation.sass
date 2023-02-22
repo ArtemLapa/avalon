@@ -1,0 +1,85 @@
+@import constants
+
+.custom-navigation
+  .v-toolbar__content
+    padding: 24px 0
+    @media screen and (min-width: 991px)
+      padding: 32px 0
+
+.navigation
+  width: 100%
+
+  &__logo-link
+    transition: transform 300ms ease, color 300ms ease, -webkit-transform 300ms ease
+    width: 100%
+    display: inline-block
+    &:hover
+      transform: translate(0px, -3px)
+
+  &__toggle-btn
+    padding: 2px 12px
+    &--active
+      .navigation__line:first-child
+        transform: translate3d(0px, 8px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(135deg) skew(0deg, 0deg)
+      .navigation__line:last-child
+        transform: translate3d(0px, -7px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg)
+    @media screen and (min-width: 991px)
+      display: none
+
+  &__line
+    display: block
+    width: 32px
+    height: 3px
+    background-color: $color-5
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
+    transform-style: preserve-3d
+    transition: transform .2s ease-in-out
+    border-radius: 20px
+    margin: 12px 0
+
+  &__menu
+    position: absolute
+    overflow: hidden
+    left: 0
+    right: 0
+    width: 100%
+
+  &__list-wrapper
+    width: 100%
+    height: 100vh
+    border-top: 1px solid $neutral-20
+    border-bottom: 1px solid $neutral-20
+    background-color: $color-2
+    padding: 24px !important
+    transform: translateY(-120%) translateX(0)
+    transition: transform 400ms ease 0s
+    &--active
+      transform: translateY(0) translateX(0)
+
+  &__list
+    flex-direction: column
+    display: none
+    &--mobile
+      display: flex
+    @media screen and (min-width: 991px)
+      flex-direction: row
+      align-items: center
+      display: flex
+
+  &__item
+    margin-bottom: 12px
+    &:last-child
+      margin-top: 32px
+    @media screen and (min-width: 991px)
+      padding: 0 18px
+      margin-bottom: 0
+      &:last-child
+        padding: 0
+        margin-top: 0
+
+  &__link
+    color: $text-white
+    text-align: left
+    transition: color .3s ease-in-out
+    &:hover
+      color: $text-gray

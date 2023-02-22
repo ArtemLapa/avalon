@@ -1,0 +1,101 @@
+@import constants
+
+.faq
+  padding: 96px 0
+
+  &__heading-section
+    margin-bottom: 32px
+    @media screen and (min-width: 767px)
+      margin-bottom: 48px
+    @media screen and (min-width: 991px)
+      margin-bottom: 64px
+
+  &__grid
+    grid-column-gap: 28px
+    grid-row-gap: 28px
+    grid-template-columns: 1fr
+    grid-template-rows: auto
+
+  &__card
+    overflow: hidden
+    max-width: 994px
+    border-radius: 24px
+    background-color: $neutral-10
+    padding: 20px 25px 30px
+    cursor: pointer
+    transition: background-color .3s ease-in-out
+    &:hover
+      background-color: $neutral-20
+    @media screen and (min-width: 479px)
+      padding-right: 35px
+      padding-left: 35px
+    @media screen and (min-width: 767px)
+      padding: 40px 48px 50px 54px
+
+  &__card-title
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__number
+    font-size: 1rem
+    line-height: 1
+    font-weight: 600
+    color: $text-white
+
+  &__card-heading
+    margin: 10px 0
+
+  &__plus-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 20px
+    max-height: 20px
+    min-height: 20px
+    min-width: 20px
+    overflow: hidden
+    margin-left: 10px
+    transition: transform .3s ease-in-out
+    @media screen and (min-width: 479px)
+      width: 22px
+      max-height: 22px
+      min-height: 22px
+      min-width: 22px
+      margin-left: 20px
+    @media screen and (min-width: 767px)
+      margin-left: 0
+    &--active
+      .faq__icon--1
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(180deg) skew(0deg, 0deg)
+      .faq__icon--2
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(90deg) skew(0deg, 0deg)
+
+  &__icon
+    position: absolute
+    background-color: #3d96f4
+    transition: transform .3s ease-in-out
+    &--1
+      width: 24px
+      min-height: 2px
+    &--2
+      width: 2px
+      min-height: 24px
+
+  &__answer
+    display: none
+    max-width: 664px
+    height: 0
+    opacity: 0
+    transform: translate3d(0px, 100%, 0px) scale3d(0.95, 0.95, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
+    transform-style: preserve-3d
+    will-change: width, height, opacity, transform
+    transition: transform .2s ease-in-out, height .2s ease-in-out, opacity .2s ease-in-out
+    &--active
+      display: block
+      transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
+      height: auto
+      opacity: 1
+
+  &__space
+    height: 18px

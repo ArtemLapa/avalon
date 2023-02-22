@@ -1,0 +1,244 @@
+@import constants
+
+body
+  background-color: $color-2
+  &::-webkit-scrollbar
+    width: 6px !important
+  &::-webkit-scrollbar-track
+    background-color: rgba(129, 129, 139, 0.2) !important
+  &::-webkit-scrollbar-thumb
+    background-color: rgb(129, 129, 139) !important
+    border-radius: 0 !important
+
+h1
+  font-size: 2rem
+  line-height: 1.1
+  @media screen and (min-width: 479px)
+    font-size: 2.5rem
+  @media screen and (min-width: 767px)
+    font-size: 3.2rem
+  @media screen and (min-width: 1440px)
+    font-size: 4rem
+
+h2
+  font-size: 3rem
+  line-height: 1.1
+  color: $text-white
+
+h3
+  font-size: 1.8rem
+  line-height: 1.2
+  color: $text-white
+  font-weight: 400
+  @media screen and (min-width: 479px)
+    font-size: 2.5rem
+
+h4
+  font-size: 2rem
+  line-height: 1.2
+  color: $text-white
+
+h5
+  font-size: 1.5rem
+  line-height: 1.2
+  color: $text-white
+
+h6
+  font-size: 1.2rem
+  line-height: 1.2
+  color: $text-white
+
+p
+  font-size: 1rem
+  line-height: 1.6
+  color: $text-gray
+  @media screen and (min-width: 767px)
+    font-size: 1.25rem
+
+li
+  font-size: 1rem
+  line-height: 1.6
+
+a
+  font-size: 1rem
+  line-height: 1.6
+  text-decoration: none
+
+.text-white
+  color: $text-white
+
+.text-gray
+  color: $text-gray
+
+.theme--light.v-application
+  background: $color-2
+
+.v-application
+  p
+    margin: 0
+  ul
+    list-style: none
+    padding-left: 0
+
+.subtitle-chip
+  display: inline-block
+  margin-bottom: 15px
+  padding: 9px 18px
+  border-style: solid
+  border-width: 1px
+  border-color: $neutral-20
+  border-radius: 12px
+  color: $text-gray
+  font-size: 0.675rem
+  letter-spacing: 2px
+  text-transform: uppercase
+
+.section-title
+  font-size: 2rem
+  color: $text-white
+  margin: 10px 0
+  @media screen and (min-width: 767px)
+    font-size: 3.2rem
+    line-height: 1.2
+    font-weight: 500
+
+.section-text
+  font-size: 0.925rem
+  color: $text-gray
+  @media screen and (min-width: 767px)
+    font-size: 1rem
+
+.text-center
+  text-align: center
+
+.text-small
+  font-size: 0.925rem
+  line-height: 1.5
+  @media screen and (min-width: 767px)
+    font-size: 1rem
+
+.heading-small
+  margin-top: 0
+  margin-bottom: 0
+  color: $text-white
+  font-size: 1.8rem
+  line-height: 1.4
+  font-weight: 400
+  @media screen and (min-width: 991px)
+    font-size: 2rem
+
+.heading-medium
+  font-size: 2rem
+  line-height: 1.2
+  font-weight: 500
+  @media screen and (min-width: 479px)
+    font-size: 2.5rem
+  @media screen and (min-width: 767px)
+    font-size: 3.2rem
+
+.heading-xsmall
+  font-size: 1.2rem
+  line-height: 1.4
+  font-weight: 400
+  @media screen and (min-width: 479px)
+    font-size: 1.4rem
+  @media screen and (min-width: 767px)
+    font-size: 1.2rem
+
+.grid-layout
+  display: grid
+  grid-auto-columns: 1fr
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: auto auto
+  grid-row-gap: 16px
+  grid-column-gap: 16px
+
+.dots-wrapper
+  position: absolute
+  grid-column-gap: 6px
+  grid-row-gap: 6px
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+  grid-template-rows: auto auto auto auto auto auto auto auto
+
+.dot
+  width: 8px
+  height: 8px
+  border-radius: 50%
+  background-color: $neutral-20
+  @media screen and (min-width: 767px)
+    width: 10px
+    height: 10px
+
+.form-wrapper
+  margin-top: 20px
+  @media screen and (min-width: 767px)
+    margin-top: 24px
+  @media screen and (min-width: 991px)
+    margin-top: 32px
+
+
+.form-input
+  display: block
+  width: 100%
+  height: 38px
+  font-size: 14px
+  line-height: 1.4
+  color: #333333
+  vertical-align: middle
+  background-color: $color-5
+  border: 1px solid #cccccc
+  padding: 8px 12px
+  margin-bottom: 10px
+  &--error
+    border-color: $text-error !important
+    color: $text-error !important
+    &::placeholder
+      color: $text-error !important
+  &__wrapper
+    width: 100%
+
+.error-message
+  display: inline-block
+  font-size: 12px
+  line-height: 16px
+  font-weight: 300
+  color: $text-error
+  min-height: 16.5px
+  margin-left: 24px
+
+.container
+  max-width: 1320px !important
+  padding: 0 20px !important
+  @media screen and (min-width: 767px)
+    padding: 0 40px !important
+
+.max-width-content
+  max-width: 512px
+  width: 100%
+  &--medium
+    max-width: 32rem
+  &--large
+    max-width: 48rem
+
+.form-field
+  display: flex
+  align-items: flex-start
+  flex-direction: column
+  grid-column-gap: 1rem
+  grid-row-gap: 1rem
+  @media screen and (min-width: 767px)
+    flex-direction: row
+    align-items: flex-start
+
+.mt-block
+  margin-top: 72px
+  @media screen and (min-width: 767px)
+    margin-top: 128px
+  @media screen and (min-width: 991px)
+    margin-top: 192px
+
+@media screen and (min-width: 991px)
+  header
+    padding: 0 20px
+  .v-main
+    padding: 90px 20px 0 !important
